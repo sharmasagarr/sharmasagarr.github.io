@@ -22,5 +22,5 @@ html {
 
 /* Offset for all anchor links */
 section {
-  scroll-margin-top: 3rem; /* value based on header height */
+  scroll-margin-top: 4rem; /* value based on header height */
 }

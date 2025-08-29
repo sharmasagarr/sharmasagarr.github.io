@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="w-full min-h-screen flex items-center pt-20 pb-10">
+    <section id="home" className="w-full min-h-screen flex items-center pt-20 pb-5">
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           
@@ -23,7 +23,7 @@ const HeroSection = () => {
             
             <p className="text-md text-gray-600 dark:text-gray-300 max-w-xl mb-5 leading-relaxed">
               I craft seamless digital experiences and bring ideas to life with clean, 
-              responsive, and modern web development. Passionate about creating solutions 
+              responsive, and modern web & app development. Passionate about creating solutions 
               that make a difference.
             </p>
             
@@ -35,7 +35,7 @@ const HeroSection = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mb-6 md:mb-0">
-              <a href="#contact" className="w-full md:w-[40%] justify-center px-4 md:px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center">
+              <a href="#contact" className="w-full md:w-[50%] justify-center px-4 md:px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center">
                 Let's Talk
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

@@ -32,7 +32,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="w-full py-10">
+    <section id="experience" className="w-full py-5">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header - Matches Projects Section */}
         <div className="text-center mb-16">

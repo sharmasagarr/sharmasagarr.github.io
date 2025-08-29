@@ -52,7 +52,7 @@ export default function HeaderSection() {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-1">
             <a
               href="#home"
               className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
@@ -328,7 +328,7 @@ export default function HeaderSection() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+              className="lg:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
             >
               {mobileMenuOpen ? (
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -345,7 +345,7 @@ export default function HeaderSection() {
         </div>
         {/* Mobile navigation dropdown */}
         {mobileMenuOpen && (
-          <nav className="md:hidden mt-3 space-y-2 pb-3 animate-fade-in">
+          <nav className="lg:hidden mt-3 space-y-2 pb-3 animate-fade-in">
             {["Home", "About", "Experience", "Projects", "Skills", "Contact"].map((item) => (
               <a
                 key={item}

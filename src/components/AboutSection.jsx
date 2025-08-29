@@ -2,13 +2,13 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full py-10">
+    <section id="about" className="w-full py-5">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-16">
           
           {/* Left Side - Image/Illustration */}
           <div className="flex-1 flex items-center justify-center relative">
-            <div className="relative ">
+            <div className="relative max-w-md">
               <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl opacity-10 animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl opacity-10 animate-pulse delay-1000"></div>
               
@@ -96,7 +96,7 @@ const AboutSection = () => {
             <a
               href="/Sagar_Sharma_Resume.pdf"
               download="Sagar_Sharma_Resume.pdf"
-              className="px-8 md:w-[60%] py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+              className="px-8 md:w-[80%] lg:w-[60%] py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
             >
               Download Resume
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
