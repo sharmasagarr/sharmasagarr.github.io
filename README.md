@@ -65,7 +65,7 @@ npm run build
 src/
 ├── components/        # Reusable React components
 ├── hooks/            # Custom React hooks
-├── App.jsx           # Images, icons, and static files
+├── App.jsx           # Component to wrap all sections
 ├── index.css           # Global styles and Tailwind config
 └── main.jsx          # Main application component
 ```
@@ -105,7 +105,7 @@ While this is a personal portfolio, I welcome suggestions and feedback! Feel fre
 
 - **Portfolio:** [sharmasagarr.github.io](https://sharmasagarr.github.io)
 - **GitHub:** [@sharmasagarr](https://github.com/sharmasagarr)
-- **LinkedIn:** [Connect with me](https://linkedin.com/in/sharmasagar79)
+- **LinkedIn:** [@sharmasagar79](https://linkedin.com/in/sharmasagar79)
 - **Email:** [sharmasagar01@outlook.com](mailto:sharmasagar01@outlook.com)
 
 
