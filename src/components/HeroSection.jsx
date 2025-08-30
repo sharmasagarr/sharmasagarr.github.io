@@ -1,8 +1,90 @@
-import React from "react";
+import {useState, useEffect} from "react";
 
 const HeroSection = () => {
+  const firstName = "Sagar";
+  const lastName = "Sharma";
+  const [name, setName] = useState({
+    firstName: "",
+    lastName: ""
+  });
+  const [showCursor, setShowCursor] = useState(true);
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const [currentlyTyping, setCurrentlyTyping] = useState('firstName'); // 'firstName', 'lastName', or 'done'
+
+  useEffect(() => {
+    let typingInterval;
+    let startTimeout;
+
+    // Wait 3 milliseconds after page load
+    startTimeout = setTimeout(() => {
+      let currentIndex = 0;
+      typingInterval = setInterval(() => {
+        if (currentIndex <= firstName.length) {
+          setName(prev => ({
+            ...prev,
+            firstName: firstName.substring(0, currentIndex)
+          }));
+          currentIndex++;
+        } else {
+          clearInterval(typingInterval);
+
+          // Start typing last name after short pause
+          setTimeout(() => {
+            setCurrentlyTyping("lastName");
+            let lastIndex = 0;
+            const lastNameInterval = setInterval(() => {
+              if (lastIndex <= lastName.length) {
+                setName(prev => ({
+                  ...prev,
+                  lastName: lastName.substring(0, lastIndex)
+                }));
+                lastIndex++;
+              } else {
+                clearInterval(lastNameInterval);
+                setCurrentlyTyping("done");
+                setIsTypingComplete(true);
+              }
+            }, 150);
+          }, 300);
+        }
+      }, 150);
+    }, 300); // ✅ wait 3 milliseconds before starting typing
+
+    return () => {
+      clearInterval(typingInterval);
+      clearTimeout(startTimeout);
+    };
+  }, [firstName, lastName]);
+
+
+  // Cursor blinking after all typing finishes
+  useEffect(() => {
+    let cursorInterval;
+    let cursorTimeout;
+
+    if (isTypingComplete) {
+      cursorInterval = setInterval(() => {
+        setShowCursor(prev => !prev);
+      }, 500);
+
+      // After 10 seconds, stop blinking and hide cursor
+      cursorTimeout = setTimeout(() => {
+        clearInterval(cursorInterval);
+        setShowCursor(false);
+      }, 10000);
+    } else {
+      // Keep cursor ON during typing
+      setShowCursor(true);
+    }
+
+    return () => {
+      clearInterval(cursorInterval);
+      clearTimeout(cursorTimeout);
+    };
+  }, [isTypingComplete]);
+
   return (
-    <section id="home" className="w-full min-h-screen flex items-center pt-20 pb-5">
+    <section id="home" className="w-full lg:h-screen flex items-center pt-20 pb-5">
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           
@@ -11,7 +93,19 @@ const HeroSection = () => {
             <p className="text-lg font-medium niconne-regular text-blue-600 dark:text-blue-400 mb-2">hello, I'm</p>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4 tracking-wider">
-              Sagar <br /><span className="text-blue-600 dark:text-blue-400">Sharma</span>
+              <span className="inline-flex items-baseline">
+                {name.firstName}
+                <span className={`inline-block w-0.5 h-[1em] ml-0.5 align-baseline ${
+                  currentlyTyping === 'firstName' ? 'bg-blue-600' : 'bg-transparent'
+                } ${showCursor ? 'opacity-100' : 'opacity-0'}`}></span>
+              </span>
+              <br />
+              <span className="text-blue-600 dark:text-blue-400 inline-flex items-baseline">
+                {name.lastName}
+                <span className={`inline-block w-0.5 h-[1em] ml-0.5 align-baseline ${
+                  (currentlyTyping === 'lastName' || currentlyTyping === 'done') ? 'bg-blue-600' : 'bg-transparent'
+                } ${showCursor ? 'opacity-100' : 'opacity-0'}`}></span>
+              </span>
             </h1>
             
             <div className="flex items-center mb-6">
