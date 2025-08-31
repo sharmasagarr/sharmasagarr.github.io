@@ -8,20 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sagar Sharma</title>
-    <script type="module" crossorigin src="/assets/index-C7Vg7-id.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DLQI_8nR.css">
-  </head>
-  <body class="outfit-regular">
-    <div id="root"></div>
     <script>
-      (function() {
-        const saved = localStorage.getItem('theme');
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (saved === 'dark' || (!saved && systemDark)) {
-          document.documentElement.classList.add('dark');
+      (function () {
+        let theme = localStorage.getItem("theme");
+        if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
         }
       })();
     </script>
+    <script type="module" crossorigin src="/assets/index-2H09wFOB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DnpJE5J3.css">
+  </head>
+  <body class="outfit-regular">
+    <div id="root"></div>
   </body>
 </html>
