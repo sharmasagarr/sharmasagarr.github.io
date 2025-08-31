@@ -76,5 +76,5 @@ export function useTheme() {
     setTheme("system");
   };
 
-  return { theme, toggleTheme, toggleLightTheme, toggleDarkTheme, resetToSystem };
+  return { theme, setTheme, toggleTheme, toggleLightTheme, toggleDarkTheme, resetToSystem };
 }

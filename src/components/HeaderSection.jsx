@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "../hooks/useTheme";
 
 export default function HeaderSection() {
-  const { theme, toggleLightTheme, toggleDarkTheme, resetToSystem } = useTheme();
+  const { theme, setTheme, toggleTheme, toggleLightTheme, toggleDarkTheme, resetToSystem } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false); // state for header visibility
 
@@ -30,6 +30,26 @@ export default function HeaderSection() {
       clearTimeout(timeoutId);
     };
   }, []);
+
+  // Detect screen width & force light/dark if theme === "system"
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+
+      if (isMobile && theme === "system") {
+        // Detect system preference
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+    };
+
+    // Run immediately on mount
+    handleResize();
+
+    // Also run on resize
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [theme, setTheme]);
 
   return (
     <header
@@ -241,11 +261,7 @@ export default function HeaderSection() {
 
             {/* For smaller screens (only one button, cycles themes) */}
             <button
-              onClick={() => {
-                if (theme === "system") toggleLightTheme();
-                else if (theme === "light") toggleDarkTheme();
-                else resetToSystem();
-              }}
+              onClick={toggleTheme}
               aria-label="Toggle theme"
               className="md:hidden p-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all"
             >
@@ -330,34 +346,46 @@ export default function HeaderSection() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
             >
-              {mobileMenuOpen ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                )
-              }
+              <span className="relative block w-6 h-6">
+                {/* Top bar */}
+                <span
+                  className={`absolute left-0 h-0.5 w-6 bg-current rounded-full transform transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
+                    mobileMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
+                  }`}
+                ></span>
+
+                {/* Middle bar */}
+                <span
+                  className={`absolute left-0 h-0.5 w-6 bg-current rounded-full transform transition-all duration-300 ease-in-out ${
+                    mobileMenuOpen ? "opacity-0 translate-x-4 top-3" : "opacity-100 top-3"
+                  }`}
+                ></span>
+
+                {/* Bottom bar */}
+                <span
+                  className={`absolute left-0 h-0.5 w-6 bg-current rounded-full transform transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
+                    mobileMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
+                  }`}
+                ></span>
+              </span>
             </button>
           </div>
         </div>
         {/* Mobile navigation dropdown */}
-        {mobileMenuOpen && (
-          <nav className="lg:hidden mt-3 space-y-2 pb-3 animate-fade-in">
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${mobileMenuOpen ? "max-h-96" : "max-h-0"}`}>
+          <nav className="mt-3 space-y-2 pb-3">
             {["Home", "About", "Experience", "Projects", "Skills", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                onClick={() => setMobileMenuOpen(false)} // auto-close after click
-                className="block border-b border-gray-300 dark:border-gray-500 px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block border-b border-gray-300 dark:border-gray-500 px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transform transition-transform duration-300 hover:scale-105"
               >
                 {item}
               </a>
             ))}
           </nav>
-        )}
+        </div>
       </div>
     </header>
   );

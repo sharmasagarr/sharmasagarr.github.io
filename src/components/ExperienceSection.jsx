@@ -32,7 +32,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="w-full py-5">
+    <section id="experience" className="w-full py-5 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header - Matches Projects Section */}
         <div className="text-center mb-16">
@@ -108,7 +108,7 @@ const ExperienceSection = () => {
         {/* CTA Button */}
         <div className="text-center mt-12">
           <a 
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
+            className="px-8 w-full md:w-[80%] lg:w-[30%] justify-center py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
             href="/Sagar_Sharma_Resume.pdf"
             download="Sagar_Sharma_Resume.pdf"
           >

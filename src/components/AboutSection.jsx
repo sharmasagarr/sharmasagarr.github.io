@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full py-5">
+    <section id="about" className="w-full py-5 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-16">
           
@@ -90,7 +90,7 @@ const AboutSection = () => {
             <a
               href="/Sagar_Sharma_Resume.pdf"
               download="Sagar_Sharma_Resume.pdf"
-              className="px-8 md:w-[80%] lg:w-[60%] justify-self-center lg:justify-self-auto py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+              className="px-8 w-full md:w-[80%] lg:w-[60%] justify-self-center lg:justify-self-auto py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
             >
               Download Resume
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">

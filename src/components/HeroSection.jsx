@@ -84,7 +84,7 @@ const HeroSection = () => {
   }, [isTypingComplete]);
 
   return (
-    <section id="home" className="w-full lg:h-screen flex items-center pt-20 pb-5">
+    <section id="home" className="w-full h-auto lg:h-screen 2xl:h-auto flex items-center pt-20 pb-5 md:pb-8">
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           
