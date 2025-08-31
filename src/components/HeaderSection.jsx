@@ -344,26 +344,26 @@ export default function HeaderSection() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+              className="lg:hidden p-2 rounded-lg hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
             >
               <span className="relative block w-6 h-6">
                 {/* Top bar */}
                 <span
-                  className={`absolute left-0 h-0.5 w-6 bg-current rounded-full transform transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
+                  className={`absolute left-0 h-0.5 w-6 bg-black dark:bg-white rounded-full transform transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
                     mobileMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
                   }`}
                 ></span>
 
                 {/* Middle bar */}
                 <span
-                  className={`absolute left-0 h-0.5 w-6 bg-current rounded-full transform transition-all duration-300 ease-in-out ${
+                  className={`absolute left-0 h-0.5 w-6 bg-black dark:bg-white rounded-full transform transition-all duration-300 ease-in-out ${
                     mobileMenuOpen ? "opacity-0 translate-x-4 top-3" : "opacity-100 top-3"
                   }`}
                 ></span>
 
                 {/* Bottom bar */}
                 <span
-                  className={`absolute left-0 h-0.5 w-6 bg-current rounded-full transform transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
+                  className={`absolute left-0 h-0.5 w-6 bg-black dark:bg-white rounded-full transform transition-all duration-500 ease-[cubic-bezier(0.68,-0.55,0.27,1.55)] ${
                     mobileMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
                   }`}
                 ></span>

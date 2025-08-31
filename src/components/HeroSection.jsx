@@ -84,13 +84,13 @@ const HeroSection = () => {
   }, [isTypingComplete]);
 
   return (
-    <section id="home" className="w-full h-auto lg:h-screen 2xl:h-auto flex items-center pt-20 pb-5 md:pb-8">
+    <section id="home" className="w-full h-auto lg:h-screen 2xl:h-auto flex items-center pt-25 pb-5 md:pb-8">
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           
           {/* Left Side - Text Content */}
-          <div className="flex-1 animate-fadeInLeft order-2 md:order-1">
-            <p className="text-lg font-medium niconne-regular text-blue-600 dark:text-blue-400 mb-2">hello, I'm</p>
+          <div className="flex-1 order-2 md:order-1">
+            <p className="text-lg font-medium niconne-regular text-blue-600 dark:text-blue-400">hello, I'm</p>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4 tracking-wider">
               <span className="inline-flex items-baseline">
@@ -176,7 +176,7 @@ const HeroSection = () => {
           <div className="flex justify-center gap-6 bg-white dark:bg-gray-800 rounded-full shadow-lg px-8 py-3 border-1 border-gray-500 dark:border-gray-100">
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/sharmasagar79"
+              href="https://www.linkedin.com/in/sharmasagar01"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="LinkedIn"
             >
@@ -198,7 +198,7 @@ const HeroSection = () => {
             
             {/* Twitter */}
             <a
-              href="https://x.com/sharmasagar79"
+              href="https://x.com/sharmasagar_01"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="Twitter"
             >
@@ -209,7 +209,7 @@ const HeroSection = () => {
             
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/sharma.sagar79"
+              href="https://www.instagram.com/sharmasagarr.01"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="Instagram"
             >

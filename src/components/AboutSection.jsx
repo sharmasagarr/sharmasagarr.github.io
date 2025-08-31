@@ -1,5 +1,3 @@
-import React from "react";
-
 const AboutSection = () => {
   return (
     <section id="about" className="w-full py-5 md:py-8">
