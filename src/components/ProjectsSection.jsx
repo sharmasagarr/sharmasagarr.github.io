@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       id: 3,
       title: "EchoWrites",
       description: "A online blogging plateform, where users can create their profile and share their thoughts and ideas.",
-      technologies: ["Next.js", "React", "Sanity", "Authentication", "PostgreSQL"],
+      technologies: ["Next.js", "TypeScript", "Sanity", "Authentication", "PostgreSQL"],
       image: "/echowrites.png",
       liveLink: "https://echowrites.vercel.app",
       githubLink: "https://github.com/sharmasagarr/echo-writes",
