@@ -13,11 +13,18 @@ const AboutSection = () => {
               <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex items-center justify-center p-8 h-full w-full border-4 border-white dark:border-gray-700 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-2xl flex items-center justify-center">
                   <div className="text-center w-full h-full">
-                    <img
-                      src="/profile.jpg"
-                      alt="Sagar Sharma - Full Stack Developer"
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
+                    <picture>
+                      {/* Priority order: AVIF → WebP → JPEG */}
+                      <source srcSet="/profile.avif" type="image/avif" />
+                      <source srcSet="/profile.webp" type="image/webp" />
+                      <img
+                        src="/profile.jpg"
+                        alt="Sagar Sharma - Full Stack Developer"
+                        className="w-full h-full object-cover rounded-2xl"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
                   </div>
                 </div>
               </div>

@@ -24,3 +24,20 @@ html {
 section {
   scroll-margin-top: 4rem; /* value based on header height */
 }
+
+.container {
+    width: 100%;
+    @media (width >= 640px) {
+      max-width: 40rem;
+    }
+    @media (width >= 768px) {
+      max-width: 48rem;
+    }
+    @media (width >= 1024px) {
+      max-width: 64rem;
+    }
+    @media (width > 1536px) {
+      max-width: 80rem;
+    }
+}
+
