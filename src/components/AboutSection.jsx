@@ -92,16 +92,18 @@ const AboutSection = () => {
             </div>
 
             {/* CTA Button */}
-            <a
-              href="/Sagar_Sharma_Resume.pdf"
-              download="Sagar_Sharma_Resume.pdf"
-              className="px-8 w-full md:w-[80%] lg:w-[60%] justify-self-center lg:justify-self-auto py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
-            >
-              Download Resume
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </a>
+            <div className="flex justify-center lg:justify-start mt-12">
+              <a 
+                className="px-8 w-full md:w-[80%] lg:w-[60%] justify-center py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
+                href="/Sagar_Sharma_Resume.pdf"
+                download="Sagar_Sharma_Resume.pdf"
+              >
+                Download Resume
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
