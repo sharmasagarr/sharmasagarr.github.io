@@ -36,8 +36,8 @@ section {
     @media (width >= 1024px) {
       max-width: 64rem;
     }
-    @media (width > 1536px) {
-      max-width: 80rem;
+    @media (width >= 1280px) {
+      max-width: 75rem;
     }
 }
 
