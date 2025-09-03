@@ -35,10 +35,9 @@ const AboutSection = () => {
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6">
               About <span className="text-blue-600 dark:text-blue-400">Me</span>
-            </h2>
-            
+            </h2>     
             <div className="mb-8">
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+              <p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                 I'm a Full Stack Developer with expertise in creating dynamic, 
                 user-friendly web and android applications. With a strong foundation in both front-end and 
                 back-end technologies, I bring ideas to life with clean, efficient code.

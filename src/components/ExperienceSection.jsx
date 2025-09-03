@@ -37,7 +37,7 @@ const ExperienceSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             My <span className="text-blue-600 dark:text-blue-400">Experience</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A timeline of my professional journey in the tech industry.
           </p>
         </div>

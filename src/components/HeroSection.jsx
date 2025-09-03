@@ -90,15 +90,14 @@ const HeroSection = () => {
           
           {/* Left Side - Text Content */}
           <div className="flex-1 order-2 md:order-1">
-            <p className="text-lg font-medium niconne-regular text-blue-600 dark:text-blue-400">hello, I'm</p>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4 tracking-wider">
-              <span className="inline-flex items-baseline">
-                {name.firstName}
-                <span className={`inline-block w-0.5 h-[1em] ml-0.5 align-baseline ${
-                  currentlyTyping === 'firstName' ? 'bg-blue-600' : 'bg-transparent'
-                } ${showCursor ? 'opacity-100' : 'opacity-0'}`}></span>
-              </span>
+            <p className="text-base md:text-xl lg:text-2xl font-medium niconne-regular text-blue-600 dark:text-blue-400">hello, I'm</p>
+              <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-gray-800 dark:text-white mb-4 tracking-wider">
+                <span className="inline-flex items-baseline">
+                  {name.firstName}
+                  <span className={`inline-block w-0.5 h-[1em] ml-0.5 align-baseline ${
+                    currentlyTyping === 'firstName' ? 'bg-blue-600' : 'bg-transparent'
+                  } ${showCursor ? 'opacity-100' : 'opacity-0'}`}></span>
+                </span>
               <br />
               <span className="text-blue-600 dark:text-blue-400 inline-flex items-baseline">
                 {name.lastName}
@@ -110,12 +109,12 @@ const HeroSection = () => {
             
             <div className="flex items-center mb-6">
               <div className="w-4 h-0.5 bg-blue-600 mr-2"></div>
-              <p className="text-lg text-gray-600 dark:text-gray-300 font-medium">
+              <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-medium">
                 Full Stack Developer
               </p>
             </div>
             
-            <p className="text-md text-gray-600 dark:text-gray-300 max-w-xl mb-5 leading-relaxed">
+            <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-xl mb-5 leading-relaxed">
               I craft seamless digital experiences and bring ideas to life with clean, 
               responsive, and modern web & app development. Passionate about creating solutions 
               that make a difference.
@@ -169,10 +168,10 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-400 dark:bg-white mt-10 z-0 absolute right-0 h-[1px] w-[99svw] -translate-x-1/2 left-1/2"></div>
+        <div className="bg-gray-400 dark:bg-white mt-12 z-0 absolute right-0 h-[1px] w-[99svw] -translate-x-1/2 left-1/2"></div>
 
         {/* Social Widget */}
-        <div className="flex justify-center relative z-10 mt-2">
+        <div className="flex justify-center relative z-10 mt-4">
           <div className="flex justify-center gap-6 bg-white dark:bg-gray-800 rounded-full shadow-lg px-8 py-3 border-1 border-gray-500 dark:border-gray-100">
             {/* LinkedIn */}
             <a

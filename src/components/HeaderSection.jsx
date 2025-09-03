@@ -75,7 +75,7 @@ export default function HeaderSection() {
           <nav className="hidden lg:flex items-center space-x-1">
             <a
               href="#home"
-              className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
+              className="relative text-lg px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
                         hover:text-blue-600 dark:hover:text-blue-400
                         transition-colors duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:-bottom-1 
@@ -87,7 +87,7 @@ export default function HeaderSection() {
             </a>
             <a 
               href="#about"
-              className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
+              className="relative text-lg px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
                         hover:text-blue-600 dark:hover:text-blue-400
                         transition-colors duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:-bottom-1 
@@ -99,7 +99,7 @@ export default function HeaderSection() {
             </a>
             <a 
               href="#experience"
-              className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
+              className="relative text-lg px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
                         hover:text-blue-600 dark:hover:text-blue-400
                         transition-colors duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:-bottom-1 
@@ -111,7 +111,7 @@ export default function HeaderSection() {
             </a>
             <a
               href="#projects"
-              className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
+              className="relative text-lg px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
                         hover:text-blue-600 dark:hover:text-blue-400
                         transition-colors duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:-bottom-1 
@@ -123,7 +123,7 @@ export default function HeaderSection() {
             </a>
             <a
               href="#skills"
-              className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
+              className="relative text-lg px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
                         hover:text-blue-600 dark:hover:text-blue-400
                         transition-colors duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:-bottom-1 
@@ -135,7 +135,7 @@ export default function HeaderSection() {
             </a>
             <a
               href="#contact"
-              className="relative px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
+              className="relative text-lg px-4 py-2 font-medium text-gray-700 dark:text-gray-300 
                         hover:text-blue-600 dark:hover:text-blue-400
                         transition-colors duration-200 
                         after:content-[''] after:absolute after:left-1/2 after:-bottom-1 
@@ -158,7 +158,7 @@ export default function HeaderSection() {
               <button
                 onClick={resetToSystem}
                 aria-label="System theme"
-                className={`rounded-full p-1 w-7 h-7 flex items-center justify-center transition-all ${
+                className={`rounded-full cursor-pointer p-1 w-7 h-7 flex items-center justify-center transition-all ${
                   theme === 'system' 
                     ? 'bg-white dark:bg-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 text-gray-900 dark:text-white' 
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
@@ -183,7 +183,7 @@ export default function HeaderSection() {
               <button
                 onClick={toggleLightTheme}
                 aria-label="Light theme"
-                className={`rounded-full p-1 w-7 h-7 flex items-center justify-center transition-all ${
+                className={`rounded-full cursor-pointer p-1 w-7 h-7 flex items-center justify-center transition-all ${
                   theme === 'light'
                     ? 'bg-white dark:bg-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 text-gray-900 dark:text-white'
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
@@ -226,7 +226,7 @@ export default function HeaderSection() {
               <button
                 onClick={toggleDarkTheme}
                 aria-label="Dark theme"
-                className={`rounded-full p-1 w-7 h-7 flex items-center justify-center transition-all ${
+                className={`rounded-full cursor-pointer p-1 w-7 h-7 flex items-center justify-center transition-all ${
                   theme === 'dark' 
                     ? 'bg-white dark:bg-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 text-gray-900 dark:text-white' 
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
