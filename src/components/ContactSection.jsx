@@ -158,7 +158,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     autoComplete="name"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+                    className="w-full text-sm md:text-base px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-300"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -174,7 +174,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     autoComplete="email"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+                    className="w-full text-sm md:text-base px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-300"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -191,7 +191,7 @@ const ContactSection = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-300"
+                  className="w-full text-sm md:text-base px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-300"
                   placeholder="Project Collaboration or Job Opportunity"
                 />
               </div>
@@ -211,15 +211,15 @@ const ContactSection = () => {
                             focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
                             dark:bg-gray-700 dark:text-white 
                             placeholder-gray-500 dark:placeholder-gray-400 
-                            transition-colors duration-300"
-                  placeholder="Tell me about your project or job opportunity..."
+                            transition-colors duration-300 text-sm md:text-base"
+                  placeholder="Tell me about your project or job description..."
                 ></textarea>
               </div>
               
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full text-sm md:text-base py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>

@@ -46,26 +46,32 @@ const AboutSection = () => {
 
             {/* Skills/Technologies */}
             <div className="mb-10">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies I Work With</h3>
+              <h3 className="text-base md:text-base lg:text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies I Work With</h3>
               
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
                   React
                 </span>
-                <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
                   Node.js
                 </span>
-                <span className="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
                   React Native
                 </span>
-                <span className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
+                  JavaScript
+                </span>
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
                   TypeScript
                 </span>
-                <span className="px-4 py-2 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">
                   PostgreSQL
                 </span>
-                <span className="px-4 py-2 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
                   MongoDB
+                </span>
+                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                  Socket.io
                 </span>
               </div>
             </div>
@@ -73,19 +79,19 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">10+</div>
+                <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">10+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">1+</div>
+                <div className="text-2xl md:text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">1+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">10+</div>
+                <div className="text-2xl md:text-3xl font-bold text-green-600 dark:text-green-400 mb-1">10+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-1">99%</div>
+                <div className="text-2xl md:text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-1">99%</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Satisfaction</div>
               </div>
             </div>
