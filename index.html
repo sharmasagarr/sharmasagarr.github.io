@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Sagar Sharma</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
       (function () {
         let theme = localStorage.getItem("theme");
@@ -20,6 +21,15 @@
     </script>
   </head>
   <body class="outfit-regular">
+    <div id="global-loader">
+    <lottie-player
+      src="/loading-text.json"
+      background="transparent"
+      speed="1"
+      style="width: 150px; height: 150px; margin:auto; padding-top:40vh"
+      loop
+      autoplay
+    ></lottie-player>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

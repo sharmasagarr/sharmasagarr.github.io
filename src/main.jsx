@@ -8,3 +8,7 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+// remove global loader when React is ready
+const loader = document.getElementById("global-loader");
+if (loader) loader.remove();
