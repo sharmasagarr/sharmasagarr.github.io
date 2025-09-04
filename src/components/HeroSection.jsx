@@ -120,8 +120,8 @@ const HeroSection = () => {
               that make a difference.
             </p>
             
-            <div className="mb-5">
-              <p className="text-gray-700 dark:text-gray-200">
+            <div className="mb-7">
+              <p className="text-gray-700 dark:text-gray-200 text-sm md:text-lg lg:text-xl">
                 Have an exciting <span className="font-bold text-blue-600 dark:text-blue-400 underline">project</span> in mind?
               </p>
             </div>
