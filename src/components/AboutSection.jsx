@@ -49,28 +49,28 @@ const AboutSection = () => {
               <h3 className="text-base md:text-base lg:text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies I Work With</h3>
               
               <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
                   React
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
                   Node.js
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
                   React Native
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
                   JavaScript
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
                   TypeScript
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium">
                   PostgreSQL
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
                   MongoDB
                 </span>
-                <span className="flex-1 px-2 md:px-4 py-2 text-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                <span className="flex-1 py-2 text-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
                   Socket.io
                 </span>
               </div>
