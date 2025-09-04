@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProjectsSection = () => {
   const projects = [
     {
@@ -7,7 +5,7 @@ const ProjectsSection = () => {
       title: "Monarque Reality",
       description: "A full-stack real estate platform with user authentication and property management.",
       technologies: ["Next.js", "React", "Sanity", "Authentication", "PostgreSQL"],
-      image: "/project-placeholder.png",
+      image: "/images/project-placeholder.png",
       liveLink: "#1",
       githubLink: "https://github.com/sharmasagarr/monarque-reality",
       featured: true
@@ -17,7 +15,7 @@ const ProjectsSection = () => {
       title: "Splitwise+",
       description: "A React Native app for effortless group expense tracking, real-time settlements, & user management.",
       technologies: ["React Native", "Firebase", "Node.js", "Redux", "PostgreSQL"],
-      image: "/project-placeholder.png",
+      image: "/images/project-placeholder.png",
       liveLink: "#2",
       githubLink: "https://github.com/sharmasagarr/splitwise-plus",
       featured: true
@@ -27,7 +25,7 @@ const ProjectsSection = () => {
       title: "EchoWrites",
       description: "A online blogging plateform, where users can create their profile and share their thoughts and ideas.",
       technologies: ["Next.js", "TypeScript", "Sanity", "Authentication", "PostgreSQL"],
-      image: "/echowrites.png",
+      image: "/images/echowrites.png",
       liveLink: "https://echowrites.vercel.app",
       githubLink: "https://github.com/sharmasagarr/echo-writes",
       featured: false
@@ -37,7 +35,7 @@ const ProjectsSection = () => {
       title: "Task Manager",
       description: "A full-stack app that allows users to create, assign, view, filter, and update tasks based on roles.",
       technologies: ["React", "Authentication", "MongoDB", "Node.js"],
-      image: "/task-manager.png",
+      image: "/images/task-manager.png",
       liveLink: "https://sharmasagarr.github.io/taskmanager/",
       githubLink: "https://github.com/sharmasagarr/taskmanager",
       featured: false
@@ -47,7 +45,7 @@ const ProjectsSection = () => {
       title: "Assembly: Endgame",
       description: "The game challenges players to guess a random word with limited attempts — inspired by Hangman.",
       technologies: ["React", "Vite", "HTML/CSS", "Hooks"],
-      image: "/assembly.png",
+      image: "/images/assembly.png",
       liveLink: "https://sharmasagarr.github.io/assemblyEndgame/",
       githubLink: "https://github.com/sharmasagarr/assemblyEndgame",
       featured: false
@@ -57,7 +55,7 @@ const ProjectsSection = () => {
       title: "Tenzies Game",
       description: "A fun and addictive dice game built purely in React using functional components and React Hooks.",
       technologies: ["React", "Vite", "HTML/CSS", "Hooks"],
-      image: "/tenzies.png",
+      image: "/images/tenzies.png",
       liveLink: "https://sharmasagarr.github.io/tenziesGame/",
       githubLink: "https://github.com/sharmasagarr/tenziesGame",
       featured: false

@@ -153,7 +153,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
               <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex items-center justify-center h-full w-full border-4 border-white dark:border-gray-700">
                 <img
-                  src="/hero-image.svg"
+                  src="/images/hero-image.svg"
                   alt="Sagar Sharma - Full Stack Developer"
                   className="w-full h-full object-cover rounded-2xl"
                 />

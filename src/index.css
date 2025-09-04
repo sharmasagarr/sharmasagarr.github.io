@@ -15,11 +15,21 @@
   font-style: normal;
 }
 
-/* Smooth scrolling for the whole page */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Smooth scrolling for the whole page */
   font-size: 16px; /* locks 1rem = 16px */
+  background-color: #ffffff; /* default = light mode */
+  transition: background-color 0.3s ease;
 }
+
+html.dark {
+  background-color: #0f172a; /* dark mode bg */
+}
+
+body {
+  background-color: inherit; /* follow html background */
+}
+
 
 /* Offset for all anchor links */
 section {
@@ -42,3 +52,27 @@ section {
   }
 }
 
+#global-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  width: 100%;
+}
+
+.dark #global-loader {
+  background-color: #111827;
+  color: white;
+}
+
+#loader {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}

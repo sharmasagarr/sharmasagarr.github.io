@@ -15,10 +15,10 @@ const AboutSection = () => {
                   <div className="text-center w-full h-full">
                     <picture>
                       {/* Priority order: AVIF → WebP → JPEG */}
-                      <source srcSet="/profile.avif" type="image/avif" />
-                      <source srcSet="/profile.webp" type="image/webp" />
+                      <source srcSet="/images/profile.avif" type="image/avif" />
+                      <source srcSet="/images/profile.webp" type="image/webp" />
                       <img
-                        src="/profile.jpg"
+                        src="/images/profile.jpg"
                         alt="Sagar Sharma - Full Stack Developer"
                         className="w-full h-full object-cover rounded-2xl"
                         loading="lazy"
