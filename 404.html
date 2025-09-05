@@ -3,40 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <title>404 - Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="icon" href="/images/favicon.ico" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
+      :root {
+        --bg-light: #ffffff;
+        --bg-dark: #0f172a;
+        --text-light: #000000;
+        --text-dark: #f8fafc;
+        --subtext-light: #6b7280;
+        --subtext-dark: #94a3b8;
+        --btn-bg-light: #2563eb;
+        --btn-bg-dark: #3b82f6;
+        --btn-hover-light: #1d4ed8;
+        --btn-hover-dark: #2563eb;
+      }
+
       body {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        background-color: #ffffff;
+        background-color: var(--bg-light);
         text-align: center;
         font-family: "Outfit", sans-serif;
         margin: 0;
+        padding: 1rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       h1 {
-        font-size: 1.875rem; /* 30px */
+        font-size: clamp(1.5rem, 5vw, 2.25rem);
         font-weight: bold;
         margin-top: 1.5rem;
-        color: #000000;
+        color: var(--text-light);
+      }
+
+      p {
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        color: var(--subtext-light);
+        margin-top: 0.5rem;
+        max-width: 400px;
       }
 
       a {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
-        background-color: #2563eb;
+        border-radius: 9999px;
+        background-color: var(--btn-bg-light);
         color: #ffffff;
         text-decoration: none;
         font-weight: 500;
         transition: background-color 0.2s ease;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
       }
 
       a:hover {
-        background-color: #1d4ed8;
+        background-color: var(--btn-hover-light);
+      }
+
+      lottie-player {
+        width: clamp(200px, 60vw, 350px);
+        height: auto;
+      }
+
+      /* Dark Mode */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: var(--bg-dark);
+        }
+        h1 {
+          color: var(--text-dark);
+        }
+        p {
+          color: var(--subtext-dark);
+        }
+        a {
+          background-color: var(--btn-bg-dark);
+        }
+        a:hover {
+          background-color: var(--btn-hover-dark);
+        }
       }
     </style>
   </head>
@@ -45,13 +94,12 @@
       src="/animations/404.json"
       background="transparent"
       speed="1"
-      style="width: 300px; height: 300px"
       loop
       autoplay
     ></lottie-player>
 
     <h1>Oops! Page not found</h1>
-
+    <p>Sorry, the page you’re looking for doesn’t exist or has been moved.</p>
     <a href="/">Go Home</a>
   </body>
 </html>
