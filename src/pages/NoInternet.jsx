@@ -1,6 +1,6 @@
 export default function NoInternet() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-slate-900 px-4 text-center">
+    <div className="flex flex-col items-center justify-center h-[100dvh] bg-white dark:bg-slate-900 px-4 text-center">
       {/* Lottie Animation (Responsive Size) */}
       <lottie-player
         src="/animations/no-internet.json"
@@ -17,14 +17,14 @@ export default function NoInternet() {
       </h1>
 
       {/* Subtitle */}
-      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-md">
+      <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-md">
         Please check your network settings and try again.
       </p>
 
       {/* Retry Button */}
       <button
         onClick={() => window.location.reload()}
-        className="mt-6 inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-medium shadow-md hover:bg-blue-700 transition-colors duration-200 dark:bg-blue-500 dark:hover:bg-blue-400"
+        className="text-sm sm:text-base mt-6 inline-block px-6 py-2 cursor-pointer rounded-full bg-blue-600 text-white font-medium shadow-md hover:bg-blue-700 transition-colors duration-200 dark:bg-blue-500 dark:hover:bg-blue-400"
       >
         Retry
       </button>

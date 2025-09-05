@@ -27,7 +27,7 @@ const ContactSection = () => {
     setModalMessage("Sending");
 
     try {
-      const response = await fetch("https://portfolio-backend-nu-red.vercel.app/api/contact", {
+      const response = await fetch("//https://portfolio-backend-nu-red.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -270,15 +270,19 @@ const ContactSection = () => {
               ) : modalMessage === "success" ? (
                 <>
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
-                    <svg className="h-6 w-6 text-green-600 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <lottie-player
+                      autoplay
+                      loop
+                      speed="1"
+                      src="/animations/success.json"
+                      style={{ height: "150px", width: "150px" }}
+                    ></lottie-player>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Message Sent!</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">Your message has been sent successfully. I'll get back to you soon!</p>
                   <button
                     onClick={closeModal}
-                    className="cursor-pointer w-full py-3 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+                    className="cursor-pointer w-full py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
                   >
                     Close
                   </button>
@@ -286,18 +290,30 @@ const ContactSection = () => {
               ) : (
                 <>
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 dark:bg-red-900/30 mb-4">
-                    <svg className="h-6 w-6 text-red-600 dark:text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <lottie-player
+                      autoplay
+                      loop
+                      speed="1"
+                      src="/animations/error.json"
+                      style={{ height: "150px", width: "150px" }}
+                    ></lottie-player>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Error</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">There was an error sending your message. Please try again.</p>
-                  <button
-                    onClick={closeModal}
-                    className="w-full cursor-pointer py-3 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
-                  >
-                    Try Again
-                  </button>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6">There was an error sending your message. Please try again or send me a direct email.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button
+                      onClick={closeModal}
+                      className="w-full cursor-pointer py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+                    >
+                      Try Again
+                    </button>
+                    <button
+                      onClick={() => window.location.href = "mailto:sharmasagar01@outlook.com"}
+                      className="w-full cursor-pointer py-3 px-4 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-300"
+                    >
+                      Email Me
+                    </button>
+                  </div>
                 </>
               )}
             </div>
