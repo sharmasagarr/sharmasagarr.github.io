@@ -5,6 +5,9 @@
     <title>404 - Page Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link rel="icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
       :root {
@@ -19,6 +22,16 @@
         --btn-hover-light: #1d4ed8;
         --btn-hover-dark: #2563eb;
       }
+      
+      .open-sans {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+      }
+
 
       body {
         display: flex;
@@ -35,30 +48,32 @@
         transition: background-color 0.3s ease, color 0.3s ease;
       }
 
+      h1, p {
+        margin: 0;
+      }
+
       h1 {
-        font-size: clamp(1.5rem, 5vw, 2.25rem);
+        font-size: clamp(0.8rem, 5vw, 1.3rem);
         font-weight: bold;
-        margin-top: 1.5rem;
         color: var(--text-light);
+        margin-bottom: 0.5rem;
       }
 
       p {
-        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        font-size: clamp(0.6rem, 2.5vw, 0.8rem);
         color: var(--subtext-light);
-        margin-top: 0.5rem;
-        max-width: 400px;
       }
 
       a {
-        margin-top: 1.5rem;
-        padding: 0.75rem 1.5rem;
+        margin-top: 1rem;
+        padding: 0.4rem 1rem;
         border-radius: 9999px;
         background-color: var(--btn-bg-light);
         color: #ffffff;
         text-decoration: none;
         font-weight: 500;
         transition: background-color 0.2s ease;
-        font-size: clamp(0.9rem, 2.5vw, 1rem);
+        font-size: clamp(0.6rem, 2.5vw, 1rem);
       }
 
       a:hover {
@@ -90,7 +105,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="open-sans">
     <lottie-player
       src="/animations/404.json"
       background="transparent"
