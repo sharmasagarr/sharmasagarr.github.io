@@ -3,25 +3,24 @@ import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white text-center font-outfit px-4 dark:bg-gray-900">
-      {/* Animation */}
+      {/* Lottie Animation (Responsive) */}
       <lottie-player
         src="/animations/404.json"
         background="transparent"
         speed="1"
-        style={{ width: "280px", height: "280px" }}
+        className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80"
         loop
         autoplay
       ></lottie-player>
 
       {/* Title */}
-      <h1 className="mt-6 text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
+      <h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
         Oops! Page not found
       </h1>
 
       {/* Subtitle */}
-      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-md">
-        The page you’re looking for doesn’t exist or has been moved.  
-        Let’s get you back home.
+      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-md text-sm sm:text-base">
+        The page you’re looking for doesn’t exist or has been moved.
       </p>
 
       {/* Button */}
