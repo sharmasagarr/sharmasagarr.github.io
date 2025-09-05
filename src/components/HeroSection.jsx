@@ -136,7 +136,7 @@ const HeroSection = () => {
               </a>
               
               <a
-                href="/Sagar_Sharma_Resume.pdf"
+                href="/resume/Sagar_Sharma_Resume.pdf"
                 download="Sagar_Sharma_Resume.pdf"
                 className="w-full md:w-[40%] justify-center px-4 md:px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300 flex items-center"
               >                Resume

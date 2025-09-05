@@ -107,7 +107,7 @@ const ExperienceSection = () => {
         <div className="text-center mt-12">
           <a 
             className="px-8 w-full md:w-[80%] lg:w-[30%] justify-center py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-flex items-center"
-            href="/Sagar_Sharma_Resume.pdf"
+            href="/resume/Sagar_Sharma_Resume.pdf"
             download="Sagar_Sharma_Resume.pdf"
           >
             Download Resume

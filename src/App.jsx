@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
-import HeaderSection from './components/HeaderSection'
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/AboutSection'
-import ExperienceSection from './components/ExperienceSection'
-import ProjectsSection from './components/ProjectsSection'
-import SkillsSection from './components/SkillsSection'
-import ContactSection from './components/ContactSection'
-import FooterSection from './components/FooterSection'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
@@ -28,7 +23,7 @@ function App() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-slate-900">
         <lottie-player
-          src="/images/no-internet.json"
+          src="/animations/no-internet.json"
           background="transparent"
           speed="1"
           style={{ width: "300px", height: "300px" }}
@@ -44,18 +39,16 @@ function App() {
       </div>
     );
   }
+
   return (
-    <div className='bg-gradient-to-b from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800'>
-      <HeaderSection />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
-      <FooterSection />
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* Catch-all 404 */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App

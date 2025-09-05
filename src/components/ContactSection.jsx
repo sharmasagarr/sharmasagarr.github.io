@@ -260,7 +260,7 @@ const ContactSection = () => {
                       autoplay
                       loop
                       speed="1"
-                      src="/images/loading.json"
+                      src="/animations/loading.json"
                       style={{ height: "150px", width: "150px" }}
                     ></lottie-player>
                   </div>
