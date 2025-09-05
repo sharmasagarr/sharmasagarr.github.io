@@ -27,7 +27,7 @@ const ContactSection = () => {
     setModalMessage("Sending");
 
     try {
-      const response = await fetch("//https://portfolio-backend-nu-red.vercel.app/api/contact", {
+      const response = await fetch("https://portfolio-backend-nu-red.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">Phone</h4>
-                  <p className="text-gray-600 dark:text-gray-300">+91-7268931966</p>
+                  <a href="tel:+917268931966" className="text-gray-600 dark:text-gray-300">+91-7268931966</a>
                 </div>
               </div>
               
@@ -96,7 +96,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">Email</h4>
-                  <p className="text-gray-600 dark:text-gray-300">sharmasagar01@outlook.com</p>
+                  <a href="mailto:sharmasagar01@outlook.com" className="cursor-pointer text-gray-600 dark:text-gray-300">sharmasagar01@outlook.com</a>
                 </div>
               </div>
               
@@ -257,6 +257,7 @@ const ContactSection = () => {
                 <>
                   <div className="flex justify-center mb-6">
                     <lottie-player
+                      key={modalMessage}
                       autoplay
                       loop
                       speed="1"
@@ -269,8 +270,9 @@ const ContactSection = () => {
                 </>
               ) : modalMessage === "success" ? (
                 <>
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
+                  <div className="mx-auto flex items-center justify-center mb-4">
                     <lottie-player
+                      key={modalMessage}
                       autoplay
                       loop
                       speed="1"
@@ -282,34 +284,35 @@ const ContactSection = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-6">Your message has been sent successfully. I'll get back to you soon!</p>
                   <button
                     onClick={closeModal}
-                    className="cursor-pointer w-full py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+                    className="cursor-pointer w-full py-2 md:py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
                   >
                     Close
                   </button>
                 </>
               ) : (
                 <>
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 dark:bg-red-900/30 mb-4">
+                  <div className="mx-auto flex items-center justify-center mb-4">
                     <lottie-player
+                      key={modalMessage}
                       autoplay
                       loop
                       speed="1"
                       src="/animations/error.json"
-                      style={{ height: "150px", width: "150px" }}
+                      style={{ height: "65px", width: "65px" }}
                     ></lottie-player>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Error</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">There was an error sending your message. Please try again or send me a direct email.</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={closeModal}
-                      className="w-full cursor-pointer py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
+                      className="w-full cursor-pointer py-2 md:py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
                     >
                       Try Again
                     </button>
                     <button
                       onClick={() => window.location.href = "mailto:sharmasagar01@outlook.com"}
-                      className="w-full cursor-pointer py-3 px-4 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-300"
+                      className="w-full cursor-pointer py-2 md:py-3 px-4 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-300"
                     >
                       Email Me
                     </button>
