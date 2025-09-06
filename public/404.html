@@ -5,22 +5,55 @@
     <title>404 - Page Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link rel="icon" href="/images/favicon.ico" />
+    <link rel="preload" href="/animations/404.json" as="fetch" type="application/json" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
+
+      function initTheme() {
+        const saved = localStorage.getItem("theme");
+
+        if (saved) {
+          setTheme(saved); // use user preference
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            setTheme("dark");
+        } else {
+          setTheme("light");
+        }
+      }
+
+      // Run on page load
+      initTheme();
+
+      // Optional: react to system theme changes live
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+        if (!localStorage.getItem("theme")) { // only if user hasn't chosen
+          setTheme(e.matches ? "dark" : "light");
+        }
+      });
+    </script>
+
     <style>
       :root {
-        --bg-light: #ffffff;
-        --bg-dark: #0f172a;
-        --text-light: #000000;
-        --text-dark: #f8fafc;
-        --subtext-light: #6b7280;
-        --subtext-dark: #94a3b8;
-        --btn-bg-light: #2563eb;
-        --btn-bg-dark: #3b82f6;
-        --btn-hover-light: #1d4ed8;
-        --btn-hover-dark: #2563eb;
+        --bg: #ffffff;
+        --text: #000000;
+        --subtext: #6b7280;
+        --btn-bg: #2563eb;
+        --btn-hover: #1d4ed8;
+      }
+
+      [data-theme="dark"] {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --subtext: #94a3b8;
+        --btn-bg: #3b82f6;
+        --btn-hover: #2563eb;
       }
       
       .open-sans {
@@ -39,9 +72,9 @@
         align-items: center;
         justify-content: center;
         height: 100dvh;
-        background-color: var(--bg-light);
+        background-color: var(--bg);
         text-align: center;
-        font-family: "Outfit", sans-serif;
+        font-family: "Open Sans", sans-serif;
         margin: 0;
         padding-right: 1rem;
         padding-left: 1rem;
@@ -53,31 +86,31 @@
       }
 
       h1 {
-        font-size: clamp(0.8rem, 5vw, 1.3rem);
+        font-size: clamp(1rem, 5vw, 1.5rem);
         font-weight: bold;
-        color: var(--text-light);
+        color: var(--text);
         margin-bottom: 0.5rem;
       }
 
       p {
-        font-size: clamp(0.6rem, 2.5vw, 0.8rem);
-        color: var(--subtext-light);
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+        color: var(--subtext);
       }
 
       a {
         margin-top: 1rem;
-        padding: 0.4rem 1rem;
+        padding: 0.6rem 1.2rem;
         border-radius: 9999px;
-        background-color: var(--btn-bg-light);
+        background-color: var(--btn-bg);
         color: #ffffff;
         text-decoration: none;
         font-weight: 500;
         transition: background-color 0.2s ease;
-        font-size: clamp(0.6rem, 2.5vw, 1rem);
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
       }
 
       a:hover {
-        background-color: var(--btn-hover-light);
+        background-color: var(--btn-hover);
       }
 
       lottie-player {
@@ -85,24 +118,6 @@
         height: auto;
       }
 
-      /* Dark Mode */
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: var(--bg-dark);
-        }
-        h1 {
-          color: var(--text-dark);
-        }
-        p {
-          color: var(--subtext-dark);
-        }
-        a {
-          background-color: var(--btn-bg-dark);
-        }
-        a:hover {
-          background-color: var(--btn-hover-dark);
-        }
-      }
     </style>
   </head>
   <body class="open-sans">

@@ -8,17 +8,17 @@ function App() {
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
   useEffect(() => {
-    const goOffline = () => setIsOffline(true);
-    const goOnline = () => setIsOffline(false);
+    const updateStatus = () => setIsOffline(!navigator.onLine);
 
-    window.addEventListener("offline", goOffline);
-    window.addEventListener("online", goOnline);
+    window.addEventListener("online", updateStatus);
+    window.addEventListener("offline", updateStatus);
 
     return () => {
-      window.removeEventListener("offline", goOffline);
-      window.removeEventListener("online", goOnline);
+      window.removeEventListener("online", updateStatus);
+      window.removeEventListener("offline", updateStatus);
     };
   }, []);
+
 
   if (isOffline) {
     return <NoInternet />;
@@ -26,6 +26,7 @@ function App() {
 
   return (
     <Router>
+      {isOffline && <NoInternet />}
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Catch-all 404 */}
