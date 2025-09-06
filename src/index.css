@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 .outfit-regular {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -29,7 +28,6 @@ html.dark {
 body {
   background-color: inherit; /* follow html background */
 }
-
 
 /* Offset for all anchor links */
 section {

@@ -1,11 +1,47 @@
+import { useState } from 'react';
+
 const AboutSection = () => {
+    const [style, setStyle] = useState({});
+    const [torchStyle, setTorchStyle] = useState({});
+    const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - left) / width;
+    const y = (e.clientY - top) / height; 
+    const rotateX = (y - 0.8) * 20;
+    const rotateY = (x - 0.2) * -20;
+
+    setStyle({
+      transform: `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`,
+      transition: "transform 0.15s ease",
+    });
+
+    // Torch / spotlight effect
+    setTorchStyle({
+      background: `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(255,255,255,0.1) 60px, rgba(0,0,0,0.05) 150px)`,
+      borderRadius: "1.3rem",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setStyle({
+      transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
+      transition: "transform 0.5s ease",
+    });
+    setTorchStyle({});
+  };
+
   return (
     <section id="about" className="w-full py-4 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 md:gap-16">
           
           {/* Left Side - Image/Illustration */}
-          <div className="flex-1 flex items-center justify-center relative">
+          <div 
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={style} 
+            className="flex-1 flex items-center justify-center relative"
+          >
             <div className="relative max-w-md">
               <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl opacity-10 animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl opacity-10 animate-pulse delay-1000"></div>
@@ -13,6 +49,11 @@ const AboutSection = () => {
               <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex items-center justify-center p-8 h-full w-full border-4 border-white dark:border-gray-700 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-2xl flex items-center justify-center">
                   <div className="text-center w-full h-full">
+                    {/* Torch overlay */}
+                    <div
+                      className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+                      style={torchStyle}
+                    ></div>
                     <picture>
                       {/* Priority order: AVIF → WebP → JPEG */}
                       <source srcSet="/images/profile.avif" type="image/avif" />

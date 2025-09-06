@@ -107,7 +107,7 @@ const SkillsSection = () => {
               <button
                 key={skill.id}
                 onClick={() => setActiveTab(index)}
-                className={`w-full px-4 py-3 sm:px-6 sm:py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center ${
+                className={`w-full px-4 py-2 md:py-3 text-base md:text-lg sm:px-6 sm:py-3 rounded-lg cursor-pointer font-medium transition-all duration-300 flex items-center justify-center ${
                   activeTab === index
                     ? `${getColorClass(skill.color)} text-white shadow`
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"

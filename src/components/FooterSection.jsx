@@ -138,7 +138,7 @@ const FooterSection = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <a href="tel:+917268931966" className="text-gray-600 dark:text-gray-300">+91-7268931966</a>
+                <a href="tel:+917268931966">+91-7268931966</a>
               </li>
               <li className="flex items-start">
                 <svg
@@ -150,7 +150,7 @@ const FooterSection = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-                <a href="mailto:sharmasagar01@outlook.com" className="text-gray-600 dark:text-gray-300">sharmasagar01@outlook.com</a>
+                <a href="mailto:sharmasagar01@outlook.com">sharmasagar01@outlook.com</a>
               </li>
             </ul>
           </div>
