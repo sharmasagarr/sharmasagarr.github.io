@@ -58,15 +58,15 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="w-full py-5 md:py-8">
+    <section id="contact" className="w-full py-4 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-4 md:mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-2 md:mb-4">
             Get In <span className="text-blue-600 dark:text-blue-400">Touch</span>
           </h2>
           <p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out and I'll get back to you as soon as possible.
+            Feel free to reach out & I'll get back to you as soon as possible.
           </p>
         </div>
 
@@ -266,7 +266,7 @@ const ContactSection = () => {
                     ></lottie-player>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Sending Message</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Please wait while we send your message...</p>
+                  <p className="text-gray-600 text-sm md:text-base dark:text-gray-300">Please wait while we send your message...</p>
                 </>
               ) : modalMessage === "success" ? (
                 <>
@@ -281,7 +281,7 @@ const ContactSection = () => {
                     ></lottie-player>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">Your message has been sent successfully. I'll get back to you soon!</p>
+                  <p className="text-gray-600 text-sm md:text-base dark:text-gray-300 mb-6">Your message has been sent successfully. I'll get back to you soon!</p>
                   <button
                     onClick={closeModal}
                     className="cursor-pointer w-full py-2 md:py-3 px-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
@@ -302,7 +302,7 @@ const ContactSection = () => {
                     ></lottie-player>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Error</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">There was an error sending your message. Please try again or send me a direct email.</p>
+                  <p className="text-gray-600 text-sm md:text-base dark:text-gray-300 mb-6">There was an error sending your message. Please try again or send me a direct email.</p>
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={closeModal}

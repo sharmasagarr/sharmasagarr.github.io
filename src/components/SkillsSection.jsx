@@ -88,7 +88,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="w-full py-5 md:py-8">
+    <section id="skills" className="w-full py-4 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-4 md:mb-8">
@@ -122,7 +122,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Content */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-8 md:mb-16">
           {skills.map((skillCategory, index) => (
             <div
               key={skillCategory.id}

@@ -64,10 +64,10 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="w-full py-5 md:py-8">
+    <section id="projects" className="w-full py-4 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             My <span className="text-blue-600 dark:text-blue-400">Projects</span>
           </h2>
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project) => (
             <div 
               key={project.id} 
@@ -116,16 +116,16 @@ const ProjectsSection = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+              <div className="py-3 md:py-6 px-6">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 dark:text-white mb-1 md:mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 text-sm md:text-base dark:text-gray-300 mb-2 md:mb-4">
                   {project.description}
                 </p>
                 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-5">
                   {project.technologies.map((tech, index) => (
                     <span 
                       key={index}

@@ -30,10 +30,10 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="w-full py-5 md:py-8">
+    <section id="experience" className="w-full py-4 md:py-8">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header - Matches Projects Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
             My <span className="text-blue-600 dark:text-blue-400">Experience</span>
           </h2>
@@ -45,31 +45,31 @@ const ExperienceSection = () => {
         {/* Experience Timeline */}
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
-            <div key={exp.id} className="relative flex mb-12">
+            <div key={exp.id} className="relative flex mb-6 md:mb-12">
               {/* Timeline line and dot */}
               <div className="absolute left-0 top-8 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800/50 ml-2.5"></div>
               {index !== experiences.length - 1 && null}
               
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center text-white font-bold text-lg">
+              <div className="relative z-10 flex-shrink-0 text-sm md:text-base w-6 h-6 md:w-12 md:h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center text-white font-bold">
                 {index + 1}
               </div>
               
               {/* Content Card */}
-              <div className="ml-6 flex-1">
+              <div className="ml-3 md:ml-6 flex-1">
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
                   {/* Current Role Badge */}
                   {index === 0 && (
-                    <div className="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+                    <div className="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-2 md:mb-4">
                       Current Role
                     </div>
                   )}
                   
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 md:mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-800 dark:text-white">
                         {exp.position}
                       </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium">
+                      <p className="text-blue-600 text-sm md:text-base dark:text-blue-400 font-medium">
                         {exp.company}
                       </p>
                     </div>
@@ -78,7 +78,7 @@ const ExperienceSection = () => {
                     </p>
                   </div>
                   
-                  <p className="text-gray-600 dark:text-gray-300 mb-5">
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-5">
                     {exp.description}
                   </p>
                   

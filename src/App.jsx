@@ -19,14 +19,12 @@ function App() {
     };
   }, []);
 
-
   if (isOffline) {
     return <NoInternet />;
   }
 
   return (
     <Router>
-      {isOffline && <NoInternet />}
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Catch-all 404 */}

@@ -9,7 +9,9 @@ const HeroSection = () => {
   });
   const [showCursor, setShowCursor] = useState(true);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
-  const [currentlyTyping, setCurrentlyTyping] = useState('firstName'); // 'firstName', 'lastName', or 'done'
+  const [currentlyTyping, setCurrentlyTyping] = useState('firstName');
+  const [style, setStyle] = useState({});
+  const [torchStyle, setTorchStyle] = useState({});
 
   useEffect(() => {
     let typingInterval;
@@ -83,8 +85,35 @@ const HeroSection = () => {
     };
   }, [isTypingComplete]);
 
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - left) / width;
+    const y = (e.clientY - top) / height; 
+    const rotateX = (y - 0.8) * 20;
+    const rotateY = (x - 0.2) * -20;
+
+    setStyle({
+      transform: `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`,
+      transition: "transform 0.15s ease",
+    });
+
+    // Torch / spotlight effect
+    setTorchStyle({
+      background: `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(255,255,255,0.1) 60px, rgba(0,0,0,0.05) 150px)`,
+      borderRadius: "1.3rem",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setStyle({
+      transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
+      transition: "transform 0.5s ease",
+    });
+    setTorchStyle({});
+  };
+
   return (
-    <section id="home" className="w-full min-h-auto lg:min-h-[100dvh] 2xl:min-h-auto flex items-center pt-20 pb-5 md:pb-8">
+    <section id="home" className="w-full min-h-auto lg:min-h-[100dvh] 2xl:min-h-auto flex items-center pt-20 pb-4 md:pb-8">
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           
@@ -149,9 +178,19 @@ const HeroSection = () => {
 
           {/* Right Side - Image/Illustration */}
           <div className="flex-1 flex items-center justify-center order-1 md:order-2 relative">
-            <div className="relative w-60 h-60 md:w-80 md:h-80">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
-              <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex items-center justify-center h-full w-full border-4 border-white dark:border-gray-700">
+            <div className="relative w-60 h-60 md:w-80 md:h-80 lg:w-105 lg:h-105">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 rounded-full blur-xl opacity-20 animate-pulse"></div>
+              <div
+                className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-2xl flex items-center justify-center h-full w-full border-4 border-white dark:border-gray-700"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                style={style}
+              >
+                {/* Torch overlay */}
+                <div
+                  className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+                  style={torchStyle}
+                ></div>
                 <img
                   src="/images/hero-image.svg"
                   alt="Sagar Sharma - Full Stack Developer"
