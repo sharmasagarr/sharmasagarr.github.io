@@ -74,3 +74,72 @@ section {
   height: 200px;
   margin: auto;
 }
+
+@layer base {
+  :root {
+    --field-bg: #ffffff;   /* light input bg */
+    --field-fg: #000000;   /* light text/caret */
+    --field-ph: #9ca3af;   /* light placeholder (gray-400) */
+  }
+
+  .dark {
+    --field-bg: #1f2937;   /* dark input bg (gray-800) */
+    --field-fg: #ffffff;   /* dark text/caret */
+    --field-ph: #99a1af;   /* dark placeholder (gray-300) */
+
+    /* This is critical: tells UA controls (incl. autofill) to use dark palette */
+    color-scheme: dark;
+  }
+}
+
+/* --- BASE FIELD LOOK --- */
+@layer utilities {
+  /* normal state */
+  input, textarea, select {
+    background-color: var(--field-bg);
+    color: var(--field-fg);
+    caret-color: var(--field-fg);
+  }
+
+  /* normal placeholder */
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: var(--field-ph);
+    opacity: 1;
+  }
+
+  /* --- AUTOFILL (covers fill + preview) --- */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill,
+  input:-webkit-autofill-previewed,
+  textarea:-webkit-autofill-previewed,
+  select:-webkit-autofill-previewed {
+    /* force background to match our theme via inset “paint” */
+    -webkit-box-shadow: 0 0 0px 1000px var(--field-bg) inset !important;
+            box-shadow: 0 0 0px 1000px var(--field-bg) inset !important;
+
+    /* ensure text + caret follow theme */
+    -webkit-text-fill-color: var(--field-fg) !important;
+    caret-color: var(--field-fg) !important;
+
+    /* prevents UA color leaking around corners */
+    background-clip: content-box !important;
+
+    /* keep Chrome from animating a flash */
+    transition: background-color 9999s ease 0s !important;
+  }
+
+  /* placeholder while autofilled (and previewed) */
+  input:-webkit-autofill::placeholder,
+  textarea:-webkit-autofill::placeholder,
+  select:-webkit-autofill::placeholder,
+  input:-webkit-autofill-previewed::placeholder,
+  textarea:-webkit-autofill-previewed::placeholder,
+  select:-webkit-autofill-previewed::placeholder {
+    color: var(--field-ph) !important;
+    opacity: 1 !important;
+  }
+}
+

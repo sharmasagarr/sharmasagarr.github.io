@@ -211,8 +211,7 @@ const ContactSection = () => {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg 
                             focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
                             dark:bg-gray-700 dark:text-white 
-                            placeholder-gray-500 dark:placeholder-gray-400 
-                            transition-colors duration-300 text-sm md:text-base"
+                            placeholder-gray-400 transition-colors duration-300 text-sm md:text-base"
                   placeholder="Tell me about your project or job description..."
                 ></textarea>
               </div>
