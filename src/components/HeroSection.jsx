@@ -12,6 +12,8 @@ const HeroSection = () => {
   const [currentlyTyping, setCurrentlyTyping] = useState('firstName');
   const [style, setStyle] = useState({});
   const [torchStyle, setTorchStyle] = useState({});
+  const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
     let typingInterval;
@@ -84,6 +86,30 @@ const HeroSection = () => {
       clearTimeout(cursorTimeout);
     };
   }, [isTypingComplete]);
+
+  const handleDownload = async () => {
+    setLoading(true);
+
+    try {
+      // Fetch the file manually
+      const response = await fetch("/resume/Sagar_Sharma_Resume.pdf");
+      const blob = await response.blob();
+
+      // Create a link to trigger browser download
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Sagar_Sharma_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    } finally {
+      setLoading(false); // Spinner stops once file is fetched
+    }
+  };
 
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
@@ -164,15 +190,39 @@ const HeroSection = () => {
                 </svg>
               </a>
               
-              <a
-                href="/resume/Sagar_Sharma_Resume.pdf"
-                download="Sagar_Sharma_Resume.pdf"
-                className="w-full md:w-[40%] justify-center px-4 md:px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300 flex items-center"
-              >                Resume
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </a>
+              <button
+                disabled={loading}
+                onClick={handleDownload}
+                className="w-full cursor-pointer disabled:cursor-not-allowed md:w-[40%] justify-center px-4 md:px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300 flex items-center"
+              >                
+                {loading ? "Downloading" : "Resume"}
+                {loading ? (
+                  <svg
+                    className="animate-spin h-5 w-5 ml-2 text-blue-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    />
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                )}
+              </button>
             </div>
           </div>
 
