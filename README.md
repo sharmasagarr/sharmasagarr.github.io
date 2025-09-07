@@ -65,6 +65,7 @@ npm run build
 src/
 ├── components/        # Reusable React components
 ├── hooks/            # Custom React hooks
+├── pages/            # Pages for every routes
 ├── App.jsx           # Component to wrap all sections
 ├── index.css           # Global styles and Tailwind config
 └── main.jsx          # Main application component
