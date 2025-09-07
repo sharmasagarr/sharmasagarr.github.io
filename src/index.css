@@ -79,13 +79,13 @@ section {
   :root {
     --field-bg: #ffffff;   /* light input bg */
     --field-fg: #000000;   /* light text/caret */
-    --field-ph: #9ca3af;   /* light placeholder (gray-400) */
+    --field-ph: #9ca3af;   /* light placeholder */
   }
 
   .dark {
-    --field-bg: #1f2937;   /* dark input bg (gray-800) */
+    --field-bg: #364153;   /* dark input bg */
     --field-fg: #ffffff;   /* dark text/caret */
-    --field-ph: #99a1af;   /* dark placeholder (gray-300) */
+    --field-ph: #99a1af;   /* dark placeholder */
 
     /* This is critical: tells UA controls (incl. autofill) to use dark palette */
     color-scheme: dark;
