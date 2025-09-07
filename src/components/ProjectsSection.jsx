@@ -3,7 +3,7 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "Monarque Reality",
-      description: "A full-stack real estate platform with user authentication and property management.",
+      description: "A full-stack real estate management platform with user authentication and property management.",
       technologies: ["Next.js", "React", "Sanity", "Authentication", "PostgreSQL"],
       image: "/images/project-placeholder.png",
       liveLink: "#1",
