@@ -64,17 +64,17 @@ npm run build
 ```
 portfolio/
 |── src/
+|   |── components/
+|   |── hooks/
+|   |── pages/
 |   |── App.jsx
-|   |── components
-|   |── hooks
 |   |── index.css
-|   |── main.jsx
-|   └── pages
+|   └── main.jsx
 |── public/
-|   |── 404.html
-|   |── animations
-|   |── images
-|   └── resume
+|   |── animations/
+|   |── images/
+|   |── resume/
+|   └── 404.html
 |── .gitignore
 |── eslint.config.js
 ├── index.html
