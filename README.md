@@ -62,13 +62,28 @@ npm run build
 ## 📁 Project Structure
 
 ```
-src/
-├── components/        # Reusable React components
-├── hooks/            # Custom React hooks
-├── pages/            # Pages for every routes
-├── App.jsx           # Component to wrap all sections
-├── index.css           # Global styles and Tailwind config
-└── main.jsx          # Main application component
+portfolio/
+|── src/
+|   |── App.jsx
+|   |── components
+|   |── hooks
+|   |── index.css
+|   |── main.jsx
+|   └── pages
+|── public/
+|   |── 404.html
+|   |── animations
+|   |── images
+|   └── resume
+|── .gitignore
+|── eslint.config.js
+├── index.html
+|── LICENSE
+|── package-lock.json
+|── package.json
+|── README.md
+└── vite.config.js
+
 ```
 
 ## 🎨 Design Philosophy
