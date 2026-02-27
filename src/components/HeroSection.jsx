@@ -165,7 +165,7 @@ const HeroSection = () => {
             <div className="flex items-center mb-6">
               <div className="w-4 h-0.5 bg-blue-600 mr-2"></div>
               <p className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 font-medium">
-                Full Stack Developer
+                Software Developer
               </p>
             </div>
             
