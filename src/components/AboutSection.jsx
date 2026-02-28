@@ -117,7 +117,7 @@ const AboutSection = () => {
               
               <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
                 <span className="flex-1 py-2 text-center bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
-                  React
+                  Next.js
                 </span>
                 <span className="flex-1 py-2 text-center bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
                   Node.js
