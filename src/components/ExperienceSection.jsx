@@ -15,11 +15,11 @@ const ExperienceSection = () => {
       technologies: [
         "React",
         "Next.js",
-        "React Native",
-        "JavaScript",
+        "TypeScript",
         "Node.js",
-        "MongoDB",
+        "MySQL",
         "PostgreSQL",
+        "React Native",
       ],
     },
     {
