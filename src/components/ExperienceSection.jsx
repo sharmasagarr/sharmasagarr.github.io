@@ -5,8 +5,8 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      company: "Enpoint IT Solutions",
-      company_url: "https://enpoint.io/",
+      company: "Endpoint IT Solutions",
+      company_url: "https://enpointe.io/",
       position: "Software Developer",
       duration: "Dec 2025 - Present",
       location: "Andheri(W), Mumbai",
