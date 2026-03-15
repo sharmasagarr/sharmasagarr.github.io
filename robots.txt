@@ -1,0 +1,9 @@
+# robots.txt for sagarsharma.dev
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sagarsharma.dev/sitemap.xml
+
+# Disallow admin/private paths
+Disallow: /api/
