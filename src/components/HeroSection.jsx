@@ -265,6 +265,8 @@ const HeroSection = () => {
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/sharmasagar01"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="LinkedIn"
             >
@@ -276,6 +278,8 @@ const HeroSection = () => {
             {/* GitHub */}
             <a
               href="https://github.com/sharmasagarr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="GitHub"
             >
@@ -287,6 +291,8 @@ const HeroSection = () => {
             {/* Twitter */}
             <a
               href="https://x.com/sharmasagar_01"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="Twitter"
             >
@@ -298,6 +304,8 @@ const HeroSection = () => {
             {/* Instagram */}
             <a
               href="https://www.instagram.com/sharmasagarr.01"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 hover:-translate-y-1 transition-all duration-300"
               aria-label="Instagram"
             >
