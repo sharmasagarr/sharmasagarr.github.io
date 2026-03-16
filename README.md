@@ -1,4 +1,4 @@
-# 💫 Sagar Sharma - Portfolio Website
+# Sagar Sharma - Portfolio Website
 
 Welcome to my personal portfolio website! This is where I showcase my journey as a Full Stack Developer and my passion for creating beautiful, functional web and app experiences.
 
