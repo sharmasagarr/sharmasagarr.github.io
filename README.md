@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This is where I showcase my journey as
 
 ## 🚀 Live Demo
 
-**🔗[https://sharmasagarr.github.io](https://sharmasagarr.github.io)**
+**🔗[https://sagarsharma.dev](https://sagarsharma.dev)**
 
 ## 👨‍💻 About Me
 
@@ -119,7 +119,7 @@ While this is a personal portfolio, I welcome suggestions and feedback! Feel fre
 
 ## 📬 Connect With Me
 
-- **Portfolio:** [sharmasagarr.github.io](https://sharmasagarr.github.io)
+- **Portfolio:** [sagarsharma.dev](https://sagarsharma.dev)
 - **GitHub:** [@sharmasagarr](https://github.com/sharmasagarr)
 - **LinkedIn:** [@sharmasagar01](https://linkedin.com/in/sharmasagar01)
 - **X:** [@sharmasagar_01](https://x.com/sharmasagar_01)
