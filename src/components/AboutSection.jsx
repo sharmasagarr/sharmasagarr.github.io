@@ -86,7 +86,7 @@ const AboutSection = () => {
                       <source srcSet="/images/profile.webp" type="image/webp" />
                       <img
                         src="/images/profile.jpg"
-                        alt="Sagar Sharma - Full Stack Developer"
+                        alt="Sagar Sharma - Software Developer"
                         className="w-full h-full object-cover rounded-2xl"
                         loading="lazy"
                         decoding="async"
@@ -105,7 +105,7 @@ const AboutSection = () => {
             </h2>     
             <div className="mb-8">
               <p className="text-sm md:text-base lg:text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                I'm a Full Stack Developer with expertise in creating dynamic, 
+                I'm a Software Developer with expertise in creating dynamic, 
                 user-friendly web and android applications. With a strong foundation in both front-end and 
                 back-end technologies, I bring ideas to life with clean, efficient code.
               </p>

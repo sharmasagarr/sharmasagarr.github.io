@@ -243,7 +243,7 @@ const HeroSection = () => {
                 ></div>
                 <img
                   src="/images/hero-image.svg"
-                  alt="Sagar Sharma - Full Stack Developer"
+                  alt="Sagar Sharma - Software Developer"
                   className="w-full h-full object-cover rounded-2xl"
                 />
                 {/* Decorative elements */}

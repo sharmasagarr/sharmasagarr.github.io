@@ -1,6 +1,6 @@
 # Sagar Sharma - Portfolio Website
 
-Welcome to my personal portfolio website! This is where I showcase my journey as a Full Stack Developer and my passion for creating beautiful, functional web and app experiences.
+Welcome to my personal portfolio website! This is where I showcase my journey as a Software Developer and my passion for creating beautiful, functional web and app experiences.
 
 ## 🚀 Live Demo
 
@@ -8,7 +8,7 @@ Welcome to my personal portfolio website! This is where I showcase my journey as
 
 ## 👨‍💻 About Me
 
-I'm a Full Stack Developer with expertise in creating dynamic, user-friendly web and android applications. With a strong foundation in both front-end and back-end technologies, I bring ideas to life with clean, efficient code.
+I'm a Software Developer with expertise in creating dynamic, user-friendly web and android applications. With a strong foundation in both front-end and back-end technologies, I bring ideas to life with clean, efficient code.
 
 ## 🛠️ Technologies Used
 
